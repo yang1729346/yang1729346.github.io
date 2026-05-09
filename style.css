@@ -123,13 +123,23 @@ p {
 }
 
 .skill-item {
-    background: var(--primary-soft);
-    color: var(--primary);
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    color: #1d4ed8;
     border: 1px solid #bfdbfe;
     font-size: 0.82rem;
     border-radius: 999px;
-    padding: 5px 11px;
+    padding: 6px 14px;
     font-weight: 600;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.skill-item:hover {
+    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    color: #fff;
+    border-color: transparent;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
 /* Contact */
