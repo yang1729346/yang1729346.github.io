@@ -1,84 +1,161 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>杨磊磊 - 个人简历</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <img src="person.jpg" alt="杨磊磊" class="avatar">
-                <h1>杨磊磊</h1>
-                <p class="tagline">AI 工程师 / Agent 工程师 / 全栈开发</p>
-            </div>
-        </div>
-    </header>
-
-    <main class="container">
-        <section class="card">
-            <h2>个人简介</h2>
-            <p>热爱技术，专注于 AI 应用开发与全栈工程实践。具备丰富的项目经验，善于将复杂技术转化为实际解决方案。</p>
-        </section>
-
-        <section class="card">
-            <h2>专业技能</h2>
-            <div class="skills-grid">
-                <div class="skill-item">Python</div>
-                <div class="skill-item">Vue.js</div>
-                <div class="skill-item">FastAPI</div>
-                <div class="skill-item">Agent</div>
-                <div class="skill-item">机器学习</div>
-                <div class="skill-item">Dify</div>
-                <div class="skill-item">提示词工程</div>
-                <div class="skill-item">RAG</div>
-            </div>
-        </section>
-
-        <section class="card">
-            <h2>开源项目</h2>
-            <div class="project">
-                <h3><a href="https://github.com/yang1729346/news-headline-app" target="_blank">新闻头条 App</a></h3>
-                <p class="tech-stack">Vue3 + Vant + FastAPI 全栈移动端应用</p>
-                <p>新闻聚合与推荐系统，支持智能摘要生成。</p>
-            </div>
-            <div class="project">
-                <h3><a href="https://github.com/yang1729346/ai-learning-path-planner" target="_blank">AI 学习路径规划器</a></h3>
-                <p class="tech-stack">Streamlit + DeepSeek</p>
-                <p>个性化 AI 学习路线图生成工具。</p>
-            </div>
-            <div class="project">
-                <h3><a href="https://github.com/yang1729346/ai-chef-assistant" target="_blank">AI 厨师助手</a></h3>
-                <p class="tech-stack">FastAPI + 聊天 + OSS + 记忆管理</p>
-                <p>智能食谱推荐与烹饪指导应用。</p>
-            </div>
-            <div class="project">
-                <h3><a href="https://github.com/yang1729346/Auto-Insurance-Visualization-Dashboard" target="_blank">车险数据可视化仪表板</a></h3>
-                <p class="tech-stack">Python 数据可视化</p>
-                <p>汽车保险数据分析与可视化展示。</p>
-            </div>
-            <div class="project">
-                <h3><a href="https://github.com/yang1729346/Insurance-fraud-detection" target="_blank">车险欺诈检测模型</a></h3>
-                <p class="tech-stack">机器学习</p>
-                <p>基于阿里天池数据集训练的欺诈预测模型。</p>
-            </div>
-        </section>
-
-        <section class="card">
-            <h2>联系方式</h2>
-            <ul class="contact-list">
-                <li>邮箱: 2359555101@qq.com</li>
-                <li>GitHub: <a href="https://github.com/yang1729346" target="_blank">github.com/yang1729346</a></li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 杨磊磊. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-</html>
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+index 3fff93829437e02db28276c1c8f618c2cb58b6c0..08d73409fe506c3373409574e8c8c221437f1340 100644
+--- a/index.html
++++ b/index.html
+@@ -1,84 +1,86 @@
+ <!DOCTYPE html>
+ <html lang="zh-CN">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>杨磊磊 - 个人简历</title>
+     <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+-    <header>
+-        <div class="container">
+-            <div class="header-content">
+-                <img src="person.jpg" alt="杨磊磊" class="avatar">
++    <div class="page-shell">
++        <header class="hero">
++            <img src="person.jpg" alt="杨磊磊头像" class="avatar">
++            <div class="hero-content">
++                <p class="eyebrow">Resume · UI Refactor</p>
+                 <h1>杨磊磊</h1>
+                 <p class="tagline">AI 工程师 / Agent 工程师 / 全栈开发</p>
++                <div class="hero-meta">
++                    <a href="mailto:2359555101@qq.com">2359555101@qq.com</a>
++                    <span>·</span>
++                    <a href="https://github.com/yang1729346" target="_blank" rel="noopener noreferrer">GitHub</a>
++                </div>
+             </div>
+-        </div>
+-    </header>
++        </header>
+ 
+-    <main class="container">
+-        <section class="card">
+-            <h2>个人简介</h2>
+-            <p>热爱技术，专注于 AI 应用开发与全栈工程实践。具备丰富的项目经验，善于将复杂技术转化为实际解决方案。</p>
+-        </section>
++        <main class="layout">
++            <aside class="panel left-panel">
++                <section class="block">
++                    <h2>个人简介</h2>
++                    <p>热爱技术，专注 AI 应用开发与全栈工程实践。擅长将复杂的模型能力落地为可用产品，关注体验、性能和可维护性之间的平衡。</p>
++                </section>
+ 
+-        <section class="card">
+-            <h2>专业技能</h2>
+-            <div class="skills-grid">
+-                <div class="skill-item">Python</div>
+-                <div class="skill-item">Vue.js</div>
+-                <div class="skill-item">FastAPI</div>
+-                <div class="skill-item">Agent</div>
+-                <div class="skill-item">机器学习</div>
+-                <div class="skill-item">Dify</div>
+-                <div class="skill-item">提示词工程</div>
+-                <div class="skill-item">RAG</div>
+-            </div>
+-        </section>
+-
+-        <section class="card">
+-            <h2>开源项目</h2>
+-            <div class="project">
+-                <h3><a href="https://github.com/yang1729346/news-headline-app" target="_blank">新闻头条 App</a></h3>
+-                <p class="tech-stack">Vue3 + Vant + FastAPI 全栈移动端应用</p>
+-                <p>新闻聚合与推荐系统，支持智能摘要生成。</p>
+-            </div>
+-            <div class="project">
+-                <h3><a href="https://github.com/yang1729346/ai-learning-path-planner" target="_blank">AI 学习路径规划器</a></h3>
+-                <p class="tech-stack">Streamlit + DeepSeek</p>
+-                <p>个性化 AI 学习路线图生成工具。</p>
+-            </div>
+-            <div class="project">
+-                <h3><a href="https://github.com/yang1729346/ai-chef-assistant" target="_blank">AI 厨师助手</a></h3>
+-                <p class="tech-stack">FastAPI + 聊天 + OSS + 记忆管理</p>
+-                <p>智能食谱推荐与烹饪指导应用。</p>
+-            </div>
+-            <div class="project">
+-                <h3><a href="https://github.com/yang1729346/Auto-Insurance-Visualization-Dashboard" target="_blank">车险数据可视化仪表板</a></h3>
+-                <p class="tech-stack">Python 数据可视化</p>
+-                <p>汽车保险数据分析与可视化展示。</p>
+-            </div>
+-            <div class="project">
+-                <h3><a href="https://github.com/yang1729346/Insurance-fraud-detection" target="_blank">车险欺诈检测模型</a></h3>
+-                <p class="tech-stack">机器学习</p>
+-                <p>基于阿里天池数据集训练的欺诈预测模型。</p>
+-            </div>
+-        </section>
++                <section class="block">
++                    <h2>核心技能</h2>
++                    <div class="skills-grid">
++                        <span class="skill-item">Python</span>
++                        <span class="skill-item">Vue.js</span>
++                        <span class="skill-item">FastAPI</span>
++                        <span class="skill-item">Agent</span>
++                        <span class="skill-item">机器学习</span>
++                        <span class="skill-item">Dify</span>
++                        <span class="skill-item">提示词工程</span>
++                        <span class="skill-item">RAG</span>
++                    </div>
++                </section>
+ 
+-        <section class="card">
+-            <h2>联系方式</h2>
+-            <ul class="contact-list">
+-                <li>邮箱: 2359555101@qq.com</li>
+-                <li>GitHub: <a href="https://github.com/yang1729346" target="_blank">github.com/yang1729346</a></li>
+-            </ul>
+-        </section>
+-    </main>
++                <section class="block">
++                    <h2>联系信息</h2>
++                    <ul class="contact-list">
++                        <li><strong>邮箱</strong><a href="mailto:2359555101@qq.com">2359555101@qq.com</a></li>
++                        <li><strong>GitHub</strong><a href="https://github.com/yang1729346" target="_blank" rel="noopener noreferrer">github.com/yang1729346</a></li>
++                    </ul>
++                </section>
++            </aside>
+ 
+-    <footer>
+-        <div class="container">
+-            <p>&copy; 2026 杨磊磊. All rights reserved.</p>
+-        </div>
+-    </footer>
++            <section class="panel right-panel">
++                <h2>开源项目</h2>
++                <article class="project">
++                    <h3><a href="https://github.com/yang1729346/news-headline-app" target="_blank" rel="noopener noreferrer">新闻头条 App</a></h3>
++                    <p class="tech-stack">Vue3 + Vant + FastAPI</p>
++                    <p>全栈移动端新闻聚合与推荐系统，支持智能摘要生成，强调体验流畅与内容可读性。</p>
++                </article>
++                <article class="project">
++                    <h3><a href="https://github.com/yang1729346/ai-learning-path-planner" target="_blank" rel="noopener noreferrer">AI 学习路径规划器</a></h3>
++                    <p class="tech-stack">Streamlit + DeepSeek</p>
++                    <p>根据用户目标生成个性化学习路线图，帮助快速建立结构化的 AI 知识体系。</p>
++                </article>
++                <article class="project">
++                    <h3><a href="https://github.com/yang1729346/ai-chef-assistant" target="_blank" rel="noopener noreferrer">AI 厨师助手</a></h3>
++                    <p class="tech-stack">FastAPI + Chat + OSS + Memory</p>
++                    <p>支持智能食谱推荐与烹饪引导，结合会话记忆提升交互连续性与个性化体验。</p>
++                </article>
++                <article class="project">
++                    <h3><a href="https://github.com/yang1729346/Auto-Insurance-Visualization-Dashboard" target="_blank" rel="noopener noreferrer">车险数据可视化仪表板</a></h3>
++                    <p class="tech-stack">Python 数据可视化</p>
++                    <p>聚焦关键指标分析与图表展示，帮助业务更快识别趋势与风险信号。</p>
++                </article>
++                <article class="project">
++                    <h3><a href="https://github.com/yang1729346/Insurance-fraud-detection" target="_blank" rel="noopener noreferrer">车险欺诈检测模型</a></h3>
++                    <p class="tech-stack">机器学习</p>
++                    <p>基于阿里天池数据集训练预测模型，用于识别潜在欺诈样本并支持风控决策。</p>
++                </article>
++            </section>
++        </main>
++    </div>
+ </body>
+ </html>
+ 
+EOF
+)
