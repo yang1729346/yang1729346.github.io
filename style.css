@@ -124,7 +124,19 @@ body {
 h2 {
     font-size: 1.03rem;
     color: #1d4ed8;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+h2::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    flex-shrink: 0;
 }
 
 p {
@@ -162,24 +174,35 @@ p {
 .contact-list {
     list-style: none;
     display: grid;
-    gap: 12px;
+    gap: 14px;
 }
 
 .contact-list li {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    transition: border-color 0.2s ease;
+}
+
+.contact-list li:hover {
+    border-color: #bfdbfe;
 }
 
 .contact-list strong {
-    font-size: 0.82rem;
+    font-size: 0.78rem;
     color: #64748b;
+    letter-spacing: 0.03em;
 }
 
 .contact-list a {
     color: #0f172a;
     text-decoration: none;
     transition: color 0.2s ease;
+    font-size: 0.92rem;
 }
 
 .contact-list a:hover {
