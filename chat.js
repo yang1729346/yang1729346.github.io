@@ -3,7 +3,7 @@
   // DeepSeek API 配置
   // ============================================================
   const API_KEY = "sk-1f7e1731e34149c2915e5d7346657a14"; // 替换为你的 DeepSeek API Key
-  const API_URL = "https://api.deepseek.com/chat/completions";
+  const API_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions";
   const MODEL = "deepseek-v4-flash";
 
   // ============================================================
