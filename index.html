@@ -125,5 +125,44 @@
             <p>简历更新于 2026 年 5 月</p>
         </footer>
     </div>
+
+    <!-- AI 聊天助手 -->
+    <div id="chat-hint">
+        <span>👋 点击这里和我聊天</span>
+        <div class="chat-hint-arrow"></div>
+    </div>
+    <button id="chat-toggle" aria-label="AI 助手">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+    </button>
+
+    <div id="chat-widget">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <span class="chat-avatar-small">杨</span>
+                <span>杨磊磊 · AI 分身</span>
+            </div>
+            <button id="chat-close" aria-label="关闭">&times;</button>
+        </div>
+        <div id="chat-messages">
+            <div class="chat-msg assistant">
+                <div class="chat-bubble">
+                    <p>你好！我是杨磊磊的 AI 分身 <strong>👋</strong></p>
+                    <p>你可以问我关于他的教育背景、项目经历、技能等任何问题，我会以本人的口吻回答你~</p>
+                </div>
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <textarea id="chat-input" placeholder="输入你的问题..." rows="1"></textarea>
+            <button id="chat-send" aria-label="发送">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="chat.js"></script>
 </body>
 </html>
