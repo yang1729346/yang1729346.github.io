@@ -331,6 +331,64 @@ p {
     margin-bottom: 0;
 }
 
+/* 重点项目高亮 */
+.project.featured {
+    background: linear-gradient(135deg, #eff6ff 0%, #f0f5ff 50%, #faf5ff 100%);
+    border: 2px solid #2563eb;
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.12);
+    position: relative;
+}
+
+.project.featured:hover {
+    border-color: #1d4ed8;
+    box-shadow: 0 8px 28px rgba(37, 99, 235, 0.2);
+    transform: translateY(-3px);
+}
+
+.featured-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 12px;
+    border-radius: 999px;
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+}
+
+.project.featured p {
+    color: #334155;
+    line-height: 1.75;
+}
+
+.project-details {
+    margin: 10px 0 0 0;
+    padding-left: 18px;
+    list-style: none;
+}
+
+.project-details li {
+    position: relative;
+    margin-bottom: 8px;
+    padding-left: 14px;
+    font-size: 0.88rem;
+    color: #334155;
+    line-height: 1.7;
+}
+
+.project-details li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+    font-weight: 700;
+}
+
+.project-details li strong {
+    color: #0f172a;
+}
+
 /* Footer */
 footer {
     text-align: center;

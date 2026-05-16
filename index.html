@@ -48,6 +48,7 @@
                         <span class="skill-item">Vue.js</span>
                         <span class="skill-item">FastAPI</span>
                         <span class="skill-item">Agent</span>
+                        <span class="skill-item">LangGraph</span>
                         <span class="skill-item">机器学习</span>
                         <span class="skill-item">Dify</span>
                         <span class="skill-item">提示词工程</span>
@@ -82,6 +83,19 @@
 
                 <section class="panel">
                     <h2>项目经历</h2>
+                    <article class="project featured">
+                        <div class="project-head">
+                            <h3><a href="https://github.com/yang1729346/TradingAgents-A-Share" target="_blank" rel="noopener noreferrer">TradingAgents A股增强版</a></h3>
+                            <span class="tech-stack">LangGraph + 多智能体 + 东方财富API</span>
+                        </div>
+                        <p>基于开源多智能体金融交易框架 <a href="https://github.com/TauricResearch/TradingAgents" target="_blank" rel="noopener noreferrer">TauricResearch/TradingAgents</a> 进行二次开发。原项目仅支持美股（Yahoo Finance），本人针对A股场景完成以下核心改造：</p>
+                        <ul class="project-details">
+                            <li><strong>数据源重构</strong>：自研东方财富数据模块（410行），实现沪深京三市K线、财务报表、新闻等9类数据接口的完整对接，替换原项目美股数据源</li>
+                            <li><strong>国产模型适配</strong>：新增小米MIMO大模型接入，开发XML格式工具调用解析器，兼容多种国产LLM的非标准输出格式</li>
+                            <li><strong>系统稳定性优化</strong>：实现指数退避重试机制、工具调用轮次限制（防死循环）、数据源多级容错降级，保障长时间运行稳定性</li>
+                            <li><strong>架构理解与扩展</strong>：深入理解LangGraph状态图驱动的多Agent协作流程（分析师→研究员辩论→交易员→风控辩论→投资经理），在不破坏原有架构的前提下完成14个文件、683行代码的模块化扩展</li>
+                        </ul>
+                    </article>
                     <article class="project">
                         <div class="project-head">
                             <h3><a href="https://github.com/yang1729346/news-headline-app" target="_blank" rel="noopener noreferrer">新闻头条 App</a></h3>
