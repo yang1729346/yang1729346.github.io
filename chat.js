@@ -49,9 +49,13 @@ Python、Vue.js、FastAPI、Agent、机器学习、Dify、提示词工程、RAG
    基于阿里天池数据集训练的欺诈预测模型，用于识别潜在欺诈样本并支持风控决策。
    GitHub: https://github.com/yang1729346/Insurance-fraud-detection
 
-6. **TradingAgents 多智能体交易框架**（Python + LangGraph）
-   基于多 Agent 的 LLM 金融交易框架，模拟真实交易团队（技术分析师、情绪分析师、新闻分析师、基本面分析师、多空研究员辩论、风控团队、交易员、投资组合经理）。主要贡献：集成东方财富 API 实现 A 股原生数据获取、XML 工具调用解析适配国产 LLM、指数退避重试与限流机制、工具调用轮次限制防止 Agent 死循环。
-   GitHub: https://github.com/yang1729346/TradingAgents
+6. **TradingAgents A股增强版**（LangGraph + 多智能体 + 东方财富API）
+   基于开源多智能体金融交易框架进行二次开发。原项目仅支持美股，我针对A股场景完成核心改造：
+   - 数据源重构：自研东方财富数据模块（410行），实现沪深京三市K线、财务报表、新闻等9类数据接口
+   - 国产模型适配：新增小米MIMO大模型接入，开发XML格式工具调用解析器，兼容多种国产LLM
+   - 系统稳定性优化：指数退避重试机制、工具调用轮次限制（防死循环）、数据源多级容错降级
+   - 架构理解与扩展：深入理解LangGraph状态图驱动的多Agent协作流程，完成14个文件、683行代码的模块化扩展
+   GitHub: https://github.com/yang1729346/TradingAgents-A-Share
 
 ## 联系方式
 - 邮箱：2359555101@qq.com
